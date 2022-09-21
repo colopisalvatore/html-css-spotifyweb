@@ -257,6 +257,7 @@ img{
 }
 /* END DAILY MIX */
 
+/* POPULAR SECTION */
 .popular .card img {
     width: 90%;
     height: 90%;
@@ -265,4 +266,106 @@ img{
     align-self: center;
 
     filter: drop-shadow(0 0.7rem 1rem rgba(0, 0, 0, 0.3));
+}
+/* END POPULAR */
+
+/* LEFT BAR */
+
+/* LOGO */
+.logo{
+    flex: 1;
+    margin-bottom: 18px;
+    padding: 24px 24px;
+}
+.logo svg{
+    height: 40px;
+    max-width: 131px;
+    width: 100%;
+}
+
+/* END LOGO */
+
+/* MENU */
+#left-nav{
+    padding: 0 16px;
+}
+#left-nav ul a {
+    color: var(--text-grey);
+
+    transition: all 0.2s ease-in-out;
+}
+#left-nav ul a:hover{
+    color: var(--text-white);
+}
+.left-menu {
+    align-items: center;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+    height: 40px;
+    padding: 0 16px;
+}
+.icon{
+    height: 24px;
+    width: 24px;
+    background-color: var(--text-grey);
+    
+    transition: all 0.2s ease-in-out;
+}
+.icon:hover{
+    background-color: var(--text-white);
+}
+.playlist{
+    padding: 0 16px;
+}
+.playlist h4{
+    margin: 10px 0;
+}
+.playlist ul li{
+    padding: 8px 0;
+    color: var(--text-grey);
+    font-size: 0.9rem;
+
+    transition: all 0.2s ease-in-out;
+}
+.playlist ul li:hover{
+    color: var(--text-white);
+}
+button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+button span{
+    font-size: 16px;
+    padding-left: 8px;
+}
+.add-btn{
+    background-color: var(--text-grey);
+    color: var(--black);
+    padding: 8px 10px;
+    font-size: 24px;
+
+    transition: all 0.2s ease-in-out;
+}
+.add-btn:hover{
+    background-color: var(--text-white);
+}
+#home{  
+        -webkit-mask: url(/img/home.svg) no-repeat center;
+        mask: url(/img/home.svg) no-repeat center;
+}
+#search{
+        -webkit-mask: url(/img/search.svg) no-repeat center;
+        mask: url(/img/search.svg) no-repeat center;
+}
+#library{
+    -webkit-mask: url(/img/libreria.svg) no-repeat center;
+        mask: url(/img/libreria.svg) no-repeat center;
+}
+#playlist{
+    -webkit-mask: url(/img/) no-repeat center;
+        mask: url(/img/libreria.svg) no-repeat center;
 }
