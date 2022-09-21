@@ -3,6 +3,8 @@
     --black: #000;
     --dark-not-black: #282828;
     --deep-blu: #141922;
+    --card-background: #242424;
+    --highlight: #333333;
     --text-grey: #717171;
     --text-white: #fff;
     --lime: #ADFF2F;
@@ -25,6 +27,9 @@
 .col{
     flex-flow: column;
 }
+.padding{
+    padding: 2em 2rem;
+}
 
 
 /* LAYOUT */
@@ -39,6 +44,7 @@ min-height: 100px;
 }
 body{
     font-family: 'Montserrat', sans-serif;
+    color: var(--text-white);
 }
 .wrapper{
     width: 100%;
@@ -126,6 +132,7 @@ div#menu a{
     display: inline-block;
     position: relative;
 }
+/* HOVER EFFECT */
 div#menu a:hover{
     color: var(--text-white);
 }
@@ -149,4 +156,91 @@ div#menu a.active:before {
 
 .active {
     color: var(--lime);
+}
+/* END HOVER */
+
+/* CARD */
+.card-container{
+    margin-top: 1.5rem;
+    display: flex;
+    margin-left: -0.45rem;
+    margin-right: -0.45rem;
+
+}
+.card{
+    width: 13rem;
+    height: 100%;
+    border-radius: 0.3rem;
+    margin: 0.45rem 0.45rem;
+    padding: 1rem;
+    position: relative;
+    background-color: var(--card-background);
+
+    transition: all 0.4s;
+    cursor: pointer;
+    
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+.text{
+    margin-top: 1rem;
+    line-height: 1;
+}
+.text h2{
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text p{
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+
+    color: var(--text-grey);
+}
+.play-icon{
+    position: absolute;
+    top: 130px;
+    right: 12%;
+    
+    transform: translateY(10px);
+    filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.5));
+    opacity: 0;
+    transition: all 0.4s;
+}
+.card:hover .play-icon{
+    opacity: 1;
+    transform: translateY(0);
+}
+.card:hover{
+    background-color: var(--highlight);
+}
+.circle{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--lime);
+    display: grid;
+    place-items: center;
+
+    transform: scale(0.95);
+}
+.triangle{
+    width: 0;
+    height: 0;
+    margin-left: 0.2rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 18px solid var(--black);
+
+    transform: rotate(90deg);
+}
+.play-icon:hover .circle{
+        cursor: auto;
+        transform: scale(1);
 }
