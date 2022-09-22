@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>My Spotify</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 
 <body>
@@ -261,7 +262,40 @@
                 </section>
             </section>
         </main>
-        <div class="playbar"></div>
+        <div class="playbar flex row between padding align-center">
+            <section class="track flex row align-center">
+                <img src="./img/sinister.jpeg" alt="">
+                <div class="flex col">
+                    <h2>Sinister</h2>
+                    <p>Brano Nome</p>
+                </div>
+                <div class="player-icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+                
+            </section>
+            <section class="track">
+                    <div id="player" class="flex align-center flex-center">
+                        <i class="fa-solid fa-shuffle icon-sm margin hov-scale"></i>
+                        <i class="fa-solid fa-backward icon-sm margin hov-scale"></i>
+                        <i class="fa-regular fa-circle-play icon-md margin hov-scale"></i>
+                        <i class="fa-solid fa-forward icon-sm margin hov-scale"></i>
+                        <i class="fa-solid fa-rotate-right icon-sm margin hov-scale"></i>
+                    </div>
+                    <div id="seconds" class="flex align-center flex-center">
+                        <span class="margin">0:25</span>
+                        <progress id="bar_seconds" class="d_none_sm" value="11" max="100"></progress>
+                        <span class="margin">4:35</span>
+                    </div>
+            </section>
+            <section class="volume flex flex-center align-center">
+                <i class="fa-solid fa-list-ul margin"></i>
+                <i class="fa-solid fa-display margin"></i>
+                <i class="fa-solid fa-volume-high margin"></i>
+                <progress id="bar_volume" class="d-none-sm" value="35" max="100"></progress>
+            </section>
+        </div>
     </div>
 </body>
 

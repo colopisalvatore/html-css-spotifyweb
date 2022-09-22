@@ -15,7 +15,7 @@
 }
 
 .debug {
-    border: 1px solid black;
+    border: 1px solid white;
     min-height: 100px;
 }
 /* MEDIA QUERY 600 | 700 | 1100 */
@@ -30,6 +30,12 @@
 .start{
     justify-content: flex-start;
 }
+.between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
 .row{
     flex-direction: row;
 }
@@ -41,6 +47,9 @@
 }
 .padding{
     padding: 2rem 2rem;
+}
+.margin{
+    margin: 0.25rem 0.75rem;
 }
 .spacing{
     margin: 1.5rem 0;
@@ -61,17 +70,19 @@
 @media screen and (max-width: 768px) {
     
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 576px) {
     .desktop {
             display: none;
-        }    
-    .mobile {
-            display: block;
         }
+    .mobile{
+        display: block;
+    }
     .btn-upgrade{
         display: none;
     }
-
+    .d-none-sm {
+        display: none;
+    }
 }
 
 /* LAYOUT */
@@ -146,7 +157,6 @@ p {
     margin-top: 1.5rem;
     margin-left: -0.75rem;
     margin-right: -0.75rem;
-
 }
 
 
@@ -222,6 +232,10 @@ div:nth-child(2) ul li a{
 }
 div:nth-child(2) ul li a:hover, div:nth-child(2) ul li a::before{
     border-left: 2px solid var(--lime);
+}
+.hov-scale:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 /* END HOVER */
 
@@ -435,3 +449,72 @@ hr{
 }
 /* Player Bar */
 
+.track{
+    
+}
+.track img{
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+.track p{
+    margin-top: 0;
+    font-size: 0.75em;
+}
+.track h2{
+    font-size: 1em;
+}
+.player-icon{
+    padding-left: 50px;
+    font-size: 18px;
+    
+}
+.fa-heart, .fa-folder{
+    padding-right: 10px;
+    color: var(--text-grey);
+    cursor: pointer;
+    display: unset;
+}
+
+.fa-heart:hover,
+.fa-folder:hover{
+    color: var(--text-white);
+}
+
+/* VOLUME BAR*/
+.icon-sm {
+    font-size: 1.1rem;    
+}
+.icon-md {
+    font-size: 2.5rem;
+}
+.icon-sm, .icon-md{
+    transition: all 0.15s ease-in-out 0s;
+}
+#player{
+}
+#seconds {
+    font-size: 0.8rem;
+    position: relative;
+}
+#bar_seconds,
+#bar_volume {
+    height: 7px;
+    background-color: var(--grey);
+    border-radius: 10px;
+    overflow: hidden;
+}
+#bar_seconds::-webkit-progress-value,
+#bar_volume::-webkit-progress-value {
+    background-color: var(--light_grey);
+}
+#bar_seconds {
+    width: 30vw;
+}
+#bar_volume {
+    width: 8vw;
+}
+#bar_seconds:hover::-webkit-progress-value,
+#bar_volume:hover::-webkit-progress-value {
+    background-color: var(--lime);
+}
