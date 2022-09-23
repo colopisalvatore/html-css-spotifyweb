@@ -58,31 +58,32 @@
     overflow-y: auto;
 }
 .overflow-hidden{
-    overflow: hidden;
+    overflow-y: hidden;
 }
 /* MEDIA QUERY */
-@media screen and (max-width: 1920px) {
-}
-    
-@media screen and (max-width: 992px) {
-    
-}
-@media screen and (max-width: 768px) {
-    
-}
-@media screen and (max-width: 576px) {
-    .desktop {
-            display: none;
-        }
+@media screen and (max-width: 576px){
     .mobile{
         display: block;
-    }
-    .btn-upgrade{
-        display: none;
     }
     .d-none-sm {
         display: none;
     }
+    .main-content {
+            width: calc(100% - 60px);
+        }    
+    #left-nav {
+            width: 60px;
+        }
+    
+}
+        }
+@media screen and (max-width: 768px){}
+        
+@media screen and (max-width: 992px) {
+    .mobile {
+            display: none;
+        }
+    
 }
 
 /* LAYOUT */
@@ -99,8 +100,9 @@ main{
 nav {
     position: relative;
     width: 230px;
-    height: calc(100vh - 95px);
+    height: 100%;
     background-color: var(--black);
+    min-height: 480px;
 }
 aside {
     width: 100%;
@@ -137,13 +139,17 @@ p {
     width: calc(100% - 230px);
     height: 100%;
     background-color: var(--deep-blu);
+    min-width: calc(575px - 60px);
 }
 .inner-content{
     height: 100%;
 }
 .playlist {
-    height: calc(100% - 272);
+    height: 60%;
     padding: 0 16px;
+}
+.top-bar {
+    height: calc(100% - 30px);
 }
 .playbar{
     width: 100%;
@@ -226,12 +232,12 @@ div#menu a.active:before {
 }
 
 div:nth-child(2) ul li a{
-    border-left: 2px solid var(--black);
+    border-left: 3px solid var(--black);
 
     transition: all 0.50s ease-in-out;
 }
 div:nth-child(2) ul li a:hover, div:nth-child(2) ul li a::before{
-    border-left: 2px solid var(--lime);
+    border-left: 3px solid var(--lime);
 }
 .hov-scale:hover {
     transform: scale(1.2);
@@ -331,28 +337,6 @@ img{
 
 /* LEFT BAR */
 
-/* LOGO */
-.logo{
-    flex: 1;
-    margin-bottom: 0px;
-    padding: 16px 16px;
-}
-.logo svg{
-    height: 40px;
-    max-width: 131px;
-}
-.desktop {
-    display: inherit;
-}
-.mobile {
-    display: none;
-}
-/* END LOGO */
-
-/* MENU */
-#left-nav{
-    /* padding: 0 16px; */
-}
 .left-menu {
     align-items: center;
     cursor: pointer;
@@ -363,6 +347,21 @@ img{
     height: 40px;
     padding: 0 16px;
 }
+
+/* LOGO */
+.logo{
+    flex: 1;
+    margin-bottom: 0px;
+    padding: 16px 16px;
+}
+.logo svg{
+    height: 40px;
+    max-width: 131px;
+}
+/* END LOGO */
+
+/* MENU */
+
 .icon{
     height: 24px;
     width: 24px;
@@ -418,7 +417,7 @@ button span{
 }
 
 #user-container{
-    position: fixed;
+
     bottom: 95px;
     height: 80px;
     align-items: flex-start;
@@ -449,9 +448,6 @@ hr{
 }
 /* Player Bar */
 
-.track{
-    
-}
 .track img{
     width: 50px;
     height: 50px;
@@ -490,8 +486,6 @@ hr{
 }
 .icon-sm, .icon-md{
     transition: all 0.15s ease-in-out 0s;
-}
-#player{
 }
 #seconds {
     font-size: 0.8rem;
